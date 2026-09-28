@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="శ్రీ వేంకటేశ్వర స్తోత్రం - శ్రీ వేంకటేశ్వర స్వామి స్తోత్రం">
+
+    <title>శ్రీ వేంకటేశ్వర స్తోత్రం</title>
+
+
+    <style>
+
+        /* =========================================================
+           CUSTOM TELUGU FONT
+           ========================================================= */
+
+        @font-face {
+            font-family: "TeluguCustom";
+            src: url("Sirivennela.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        /* =========================================================
+           ROOT VARIABLES
+           ========================================================= */
+
+        :root {
+
+            --maroon: #7b1e1e;
+            --maroon-light: #a52a2a;
+            --maroon-dark: #5c1414;
+
+            --gold: #b8860b;
+            --gold-light: #d8b45a;
+            --gold-bright: #f5d477;
+
+            --cream: #f5efe3;
+            --paper: #fffdf8;
+            --verse-bg: #fffaf0;
+
+            --text: #3b2415;
+            --muted: #806b58;
+
+            --border: #ead8b9;
+
+            --shadow:
+                0 12px 35px rgba(80, 40, 10, 0.12);
+        }
+
+
+        /* =========================================================
+           RESET
+           ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================================================
+           HTML
+           ========================================================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        /* =========================================================
+           BODY
+           ========================================================= */
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #fff9ec 0%,
+                    var(--cream) 55%,
+                    #eee3d0 100%
+                );
+
+            color: var(--text);
+
+            -webkit-font-smoothing: antialiased;
+
+            text-rendering: optimizeLegibility;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        header {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 28px 15px 30px;
+
+            color: #fff8e7;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--maroon-dark),
+                    var(--maroon-light),
+                    var(--maroon)
+                );
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =========================================================
+           HEADER DECORATIVE CIRCLES
+           ========================================================= */
+
+        header::before,
+        header::after {
+
+            content: "";
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.12);
+
+            pointer-events: none;
+        }
+
+
+        header::before {
+
+            width: 220px;
+            height: 220px;
+
+            top: -120px;
+            left: -80px;
+        }
+
+
+        header::after {
+
+            width: 280px;
+            height: 280px;
+
+            right: -120px;
+            bottom: -170px;
+        }
+
+
+        /* =========================================================
+           DIVINE HEADER
+
+           CHAKRA → TITLE → SHANKHA
+
+           IMPORTANT:
+           Everything stays on ONE LINE.
+           ========================================================= */
+
+        .divine-header {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            flex-direction: row;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-wrap: nowrap;
+
+            gap: 35px;
+
+            padding: 0 15px;
+        }
+
+
+        /* =========================================================
+           SYMBOL CONTAINER
+           ========================================================= */
+
+        .symbol {
+
+            flex: 0 0 auto;
+
+            width: 135px;
+            height: 135px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* =========================================================
+           SYMBOL IMAGE
+           ========================================================= */
+
+        .symbol img {
+
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            filter:
+                brightness(0)
+                saturate(100%)
+                invert(72%)
+                sepia(48%)
+                saturate(800%)
+                hue-rotate(5deg)
+                brightness(95%)
+                contrast(95%);
+
+            transition:
+                transform 0.3s ease,
+                filter 0.3s ease;
+        }
+
+
+        /* =========================================================
+           CHAKRA
+           ========================================================= */
+
+        .symbol-chakra img {
+
+            animation:
+                divineFloat 4s ease-in-out infinite;
+        }
+
+
+        /* =========================================================
+           SHANKHA
+           ========================================================= */
+
+        .symbol-shankha img {
+
+            animation:
+                divineFloat 4s ease-in-out infinite;
+
+            animation-delay: 0.5s;
+        }
+
+
+        /* =========================================================
+           SYMBOL HOVER
+           ========================================================= */
+
+        .symbol img:hover {
+
+            transform: scale(1.07);
+
+            filter:
+                brightness(0)
+                saturate(100%)
+                invert(79%)
+                sepia(60%)
+                saturate(900%)
+                hue-rotate(5deg)
+                brightness(105%)
+                contrast(100%);
+        }
+
+
+        /* =========================================================
+           FLOAT ANIMATION
+           ========================================================= */
+
+        @keyframes divineFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+
+        /* =========================================================
+           TITLE AREA
+           ========================================================= */
+
+        .title-area {
+
+            flex: 0 1 auto;
+
+            min-width: 0;
+
+            text-align: center;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================================
+           MAIN TITLE
+           ========================================================= */
+
+        .title-area h1 {
+
+            margin: 0;
+
+            font-family:
+                "TeluguCustom",
+                "Noto Serif Telugu",
+                serif;
+
+            font-size:
+                clamp(32px, 4.5vw, 52px);
+
+            font-weight: normal;
+
+            line-height: 1.35;
+
+            white-space: nowrap;
+
+            color: #fff8e7;
+
+            letter-spacing: 0.5px;
+
+            text-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.30);
+        }
+
+
+        /* =========================================================
+           HEADER DECORATION
+           ========================================================= */
+
+        .header-decoration {
+
+            margin-top: 5px;
+
+            color: var(--gold-bright);
+
+            font-size: 20px;
+
+            letter-spacing: 5px;
+
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           MAIN CONTAINER
+           ========================================================= */
+
+        .container {
+
+            width:
+                min(100% - 30px, 980px);
+
+            margin: 45px auto;
+        }
+
+
+        /* =========================================================
+           STOTRAM CARD
+           ========================================================= */
+
+        .stotram-card {
+
+            position: relative;
+
+            padding: 50px;
+
+            background: var(--paper);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 24px;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        /* =========================================================
+           TOP DECORATION
+           ========================================================= */
+
+        .decoration {
+
+            margin-bottom: 35px;
+
+            text-align: center;
+
+            color: var(--gold);
+
+            font-size: 25px;
+
+            letter-spacing: 6px;
+        }
+
+
+        .decoration::before,
+        .decoration::after {
+
+            content: "────────";
+
+            margin: 0 12px;
+
+            color: var(--gold-light);
+
+            letter-spacing: 0;
+        }
+
+
+        /* =========================================================
+           VERSE
+           ========================================================= */
+
+        .verse {
+
+            position: relative;
+
+            margin-bottom: 30px;
+
+            padding: 28px 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffaf0,
+                    #fffdf8
+                );
+
+            border:
+                1px solid
+                #efe1c7;
+
+            border-left:
+                4px solid
+                var(--gold);
+
+            border-right:
+                4px solid
+                var(--gold);
+
+            border-radius: 16px;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        /* =========================================================
+           VERSE HOVER
+           ========================================================= */
+
+        .verse:hover {
+
+            transform: translateY(-3px);
+
+            border-color:
+                var(--gold-light);
+
+            box-shadow:
+                0 8px 24px
+                rgba(80, 40, 10, 0.10);
+        }
+
+
+        /* =========================================================
+           VERSE NUMBER
+           ========================================================= */
+
+        .verse-number {
+
+            margin-bottom: 14px;
+
+            text-align: center;
+
+            font-family:
+                "TeluguCustom",
+                "Noto Serif Telugu",
+                serif;
+
+            font-size: 26px;
+
+            color:
+                var(--maroon-light);
+        }
+
+
+        /* =========================================================
+           LYRICS
+           ========================================================= */
+
+        .lyrics {
+
+            font-family:
+                "TeluguCustom",
+                "Noto Serif Telugu",
+                serif;
+
+            font-size:
+                clamp(22px, 3.2vw, 30px);
+
+            line-height: 2;
+
+            text-align: center;
+
+            color: var(--text);
+
+            letter-spacing: 0.2px;
+        }
+
+
+        /* =========================================================
+           ENDING
+           ========================================================= */
+
+        .ending {
+
+            margin-top: 38px;
+
+            padding:
+                30px 20px 10px;
+
+            text-align: center;
+
+            font-family:
+                "TeluguCustom",
+                "Noto Serif Telugu",
+                serif;
+
+            font-size:
+                clamp(25px, 4vw, 34px);
+
+            line-height: 1.8;
+
+            color: var(--maroon);
+
+            border-top:
+                1px solid
+                #dfc79c;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+
+            padding:
+                10px 20px 35px;
+
+            text-align: center;
+
+            font-family:
+                "TeluguCustom",
+                "Noto Serif Telugu",
+                serif;
+
+            font-size: 20px;
+
+            color: var(--maroon);
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           CREATOR NAME
+           ========================================================= */
+
+        .creator-name {
+
+            display: inline-block;
+
+            margin-top: 5px;
+
+            font-family:
+                "TeluguCustom",
+                "Noto Serif Telugu",
+                serif;
+
+            font-size: 22px;
+
+            color: var(--gold);
+
+            font-weight: normal;
+        }
+
+
+        /* =========================================================
+           BACK TO TOP
+           ========================================================= */
+
+        .top-button {
+
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                var(--maroon);
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.20);
+
+            opacity: 0.9;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+
+        .top-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            background:
+                var(--maroon-dark);
+        }
+
+
+        /* =========================================================
+           LARGE DESKTOP
+           ========================================================= */
+
+        @media (min-width: 1200px) {
+
+            .divine-header {
+
+                gap: 45px;
+            }
+
+
+            .symbol {
+
+                width: 145px;
+                height: 145px;
+            }
+
+
+            .title-area h1 {
+
+                font-size: 52px;
+            }
+
+
+            .stotram-card {
+
+                padding: 55px;
+            }
+        }
+
+
+        /* =========================================================
+           LAPTOP / DESKTOP
+           ========================================================= */
+
+        @media (max-width: 1199px) {
+
+            .divine-header {
+
+                gap: 28px;
+
+                padding:
+                    0 10px;
+            }
+
+
+            .symbol {
+
+                width: 120px;
+                height: 120px;
+            }
+
+
+            .title-area h1 {
+
+                font-size:
+                    clamp(32px, 4.5vw, 46px);
+            }
+        }
+
+
+        /* =========================================================
+           TABLET
+           ========================================================= */
+
+        @media (max-width: 991px) {
+
+            header {
+
+                padding:
+                    24px 8px 26px;
+            }
+
+
+            .divine-header {
+
+                gap: 18px;
+
+                padding:
+                    0 5px;
+            }
+
+
+            .symbol {
+
+                width: 90px;
+                height: 100px;
+            }
+
+
+            .title-area h1 {
+
+                font-size:
+                    clamp(27px, 4.5vw, 38px);
+            }
+
+
+            .header-decoration {
+
+                font-size: 17px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .container {
+
+                width:
+                    min(100% - 25px, 980px);
+
+                margin:
+                    35px auto;
+            }
+
+
+            .stotram-card {
+
+                padding:
+                    40px 30px;
+
+                border-radius: 22px;
+            }
+
+
+            .lyrics {
+
+                font-size:
+                    clamp(21px, 3.4vw, 28px);
+            }
+
+
+            footer {
+
+                font-size: 18px;
+            }
+
+
+            .creator-name {
+
+                font-size: 21px;
+            }
+        }
+
+
+        /* =========================================================
+           SMALL TABLET
+           ========================================================= */
+
+        @media (max-width: 767px) {
+
+            header {
+
+                padding:
+                    22px 5px 24px;
+            }
+
+
+            /*
+             * Header ALWAYS stays on one line.
+             */
+
+            .divine-header {
+
+                display: flex;
+
+                flex-direction: row;
+
+                flex-wrap: nowrap;
+
+                gap: 8px;
+
+                width: 100%;
+
+                padding: 0 2px;
+            }
+
+
+            .symbol {
+
+                width: 70px;
+                height: 82px;
+            }
+
+
+            .title-area {
+
+                flex:
+                    1 1 auto;
+
+                min-width: 0;
+            }
+
+
+            .title-area h1 {
+
+                font-size:
+                    clamp(22px, 5vw, 32px);
+
+                white-space: nowrap;
+
+                letter-spacing: 0;
+            }
+
+
+            .header-decoration {
+
+                margin-top: 3px;
+
+                font-size: 15px;
+
+                letter-spacing: 2px;
+            }
+
+
+            .container {
+
+                width:
+                    min(100% - 20px, 980px);
+
+                margin:
+                    28px auto;
+            }
+
+
+            .stotram-card {
+
+                padding:
+                    32px 18px;
+
+                border-radius: 20px;
+            }
+
+
+            .decoration {
+
+                margin-bottom: 27px;
+
+                font-size: 21px;
+            }
+
+
+            .decoration::before,
+            .decoration::after {
+
+                content: "──────";
+
+                margin:
+                    0 6px;
+            }
+
+
+            .verse {
+
+                margin-bottom: 24px;
+
+                padding:
+                    24px 12px;
+
+                border-radius: 14px;
+            }
+
+
+            .verse-number {
+
+                font-size: 24px;
+
+                margin-bottom: 10px;
+            }
+
+
+            .lyrics {
+
+                font-size:
+                    clamp(20px, 5.5vw, 26px);
+
+                line-height: 1.9;
+            }
+
+
+            .ending {
+
+                margin-top: 30px;
+
+                padding:
+                    25px 10px 5px;
+
+                font-size:
+                    clamp(23px, 6vw, 28px);
+            }
+
+
+            footer {
+
+                padding:
+                    10px 10px 30px;
+
+                font-size: 18px;
+            }
+
+
+            .creator-name {
+
+                font-size: 20px;
+            }
+
+
+            .top-button {
+
+                width: 42px;
+                height: 42px;
+
+                right: 15px;
+                bottom: 15px;
+
+                font-size: 18px;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+           ========================================================= */
+
+        @media (max-width: 599px) {
+
+            header {
+
+                padding:
+                    20px 4px 22px;
+            }
+
+
+            .divine-header {
+
+                gap: 4px;
+
+                padding:
+                    0 2px;
+
+                flex-wrap: nowrap;
+            }
+
+
+            .symbol {
+
+                width: 58px;
+                height: 72px;
+            }
+
+
+            .title-area h1 {
+
+                font-size:
+                    clamp(18px, 5.8vw, 29px);
+
+                white-space: nowrap;
+
+                letter-spacing: 0;
+            }
+
+
+            .header-decoration {
+
+                margin-top: 2px;
+
+                font-size: 14px;
+
+                letter-spacing: 2px;
+            }
+
+
+            .container {
+
+                width:
+                    min(100% - 18px, 980px);
+
+                margin:
+                    22px auto;
+            }
+
+
+            .stotram-card {
+
+                padding:
+                    28px 12px;
+
+                border-radius: 18px;
+            }
+
+
+            .decoration {
+
+                margin-bottom: 25px;
+
+                font-size: 20px;
+            }
+
+
+            .decoration::before,
+            .decoration::after {
+
+                content: "────";
+
+                margin: 0 5px;
+            }
+
+
+            .verse {
+
+                margin-bottom: 22px;
+
+                padding:
+                    22px 8px;
+
+                border-radius: 13px;
+            }
+
+
+            .verse-number {
+
+                font-size: 23px;
+
+                margin-bottom: 10px;
+            }
+
+
+            .lyrics {
+
+                font-size:
+                    clamp(20px, 6vw, 25px);
+
+                line-height: 1.9;
+            }
+
+
+            .ending {
+
+                padding-top: 25px;
+
+                font-size: 26px;
+            }
+
+
+            footer {
+
+                padding:
+                    10px 8px 28px;
+
+                font-size: 17px;
+            }
+
+
+            .creator-name {
+
+                font-size: 20px;
+            }
+
+
+            .top-button {
+
+                width: 40px;
+                height: 40px;
+
+                right: 14px;
+                bottom: 14px;
+            }
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+           ========================================================= */
+
+        @media (max-width: 479px) {
+
+            .divine-header {
+
+                gap: 3px;
+            }
+
+
+            .symbol {
+
+                width: 50px;
+                height: 62px;
+            }
+
+
+            .title-area h1 {
+
+                font-size:
+                    clamp(17px, 5.8vw, 24px);
+            }
+
+
+            .header-decoration {
+
+                font-size: 13px;
+
+                letter-spacing: 1px;
+            }
+
+
+            .container {
+
+                width:
+                    calc(100% - 14px);
+
+                margin:
+                    18px auto;
+            }
+
+
+            .stotram-card {
+
+                padding:
+                    24px 8px;
+
+                border-radius: 16px;
+            }
+
+
+            .decoration {
+
+                font-size: 18px;
+
+                margin-bottom: 22px;
+            }
+
+
+            .decoration::before,
+            .decoration::after {
+
+                content: "───";
+
+                margin:
+                    0 3px;
+            }
+
+
+            .verse {
+
+                margin-bottom: 18px;
+
+                padding:
+                    20px 5px;
+
+                border-left-width: 3px;
+                border-right-width: 3px;
+
+                border-radius: 11px;
+            }
+
+
+            .verse-number {
+
+                font-size: 21px;
+
+                margin-bottom: 8px;
+            }
+
+
+            .lyrics {
+
+                font-size:
+                    clamp(18px, 6vw, 22px);
+
+                line-height: 1.85;
+            }
+
+
+            .ending {
+
+                font-size: 23px;
+
+                padding-top: 20px;
+            }
+
+
+            footer {
+
+                font-size: 16px;
+
+                padding-bottom: 25px;
+            }
+
+
+            .creator-name {
+
+                font-size: 19px;
+            }
+
+
+            .top-button {
+
+                width: 38px;
+                height: 38px;
+
+                right: 10px;
+                bottom: 10px;
+
+                font-size: 17px;
+            }
+        }
+
+
+        /* =========================================================
+           VERY SMALL PHONES
+           ========================================================= */
+
+        @media (max-width: 359px) {
+
+            header {
+
+                padding:
+                    17px 2px 19px;
+            }
+
+
+            .divine-header {
+
+                gap: 2px;
+            }
+
+
+            .symbol {
+
+                width: 43px;
+                height: 55px;
+            }
+
+
+            .title-area h1 {
+
+                font-size: 16px;
+
+                letter-spacing: 0;
+            }
+
+
+            .header-decoration {
+
+                font-size: 12px;
+
+                letter-spacing: 0;
+            }
+
+
+            .stotram-card {
+
+                padding:
+                    20px 6px;
+            }
+
+
+            .lyrics {
+
+                font-size: 17px;
+
+                line-height: 1.8;
+            }
+
+
+            .verse {
+
+                padding:
+                    18px 3px;
+            }
+
+
+            .verse-number {
+
+                font-size: 19px;
+            }
+
+
+            .ending {
+
+                font-size: 21px;
+            }
+
+
+            footer {
+
+                font-size: 15px;
+            }
+
+
+            .creator-name {
+
+                font-size: 18px;
+            }
+        }
+
+
+        /* =========================================================
+           LANDSCAPE PHONES
+           ========================================================= */
+
+        @media (max-height: 500px) and (orientation: landscape) {
+
+            header {
+
+                padding:
+                    12px 5px 14px;
+            }
+
+
+            .divine-header {
+
+                gap: 12px;
+            }
+
+
+            .symbol {
+
+                width: 60px;
+                height: 65px;
+            }
+
+
+            .title-area h1 {
+
+                font-size: 23px;
+            }
+
+
+            .header-decoration {
+
+                display: none;
+            }
+        }
+
+
+        /* =========================================================
+           TOUCH DEVICES
+           ========================================================= */
+
+        @media (hover: none) {
+
+            .verse:hover {
+
+                transform: none;
+
+                box-shadow: none;
+
+                border-color: #efe1c7;
+            }
+
+
+            .symbol img:hover {
+
+                transform: none;
+            }
+
+
+            .top-button:hover {
+
+                transform: none;
+
+                background:
+                    var(--maroon);
+            }
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+           ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+
+                scroll-behavior: auto;
+            }
+
+
+            .symbol img {
+
+                animation: none;
+            }
+
+
+            .verse,
+            .top-button,
+            .symbol img {
+
+                transition: none;
+            }
+
+
+            .verse:hover,
+            .top-button:hover {
+
+                transform: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+         CHAKRA → TITLE → SHANKHA
+         ========================================================= -->
+
+    <header>
+
+        <div class="divine-header">
+
+
+            <!-- CHAKRA -->
+
+            <div class="symbol symbol-chakra">
+
+                <img
+                    src="chakra.png"
+                    alt="సుదర్శన చక్రం">
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="title-area">
+
+                <h1>
+                    శ్రీ వేంకటేశ్వర స్తోత్రం
+                </h1>
+
+                
+
+            </div>
+
+
+            <!-- SHANKHA -->
+
+            <div class="symbol symbol-shankha">
+
+                <img
+                    src="shankha.png"
+                    alt="శంఖం">
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+         ========================================================= -->
+
+    <main class="container">
+
+
+        <section class="stotram-card">
+
+
+            <!-- TOP DECORATION -->
+
+            
+
+
+            <!-- =================================================
+                 VERSE 1
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 1
+                </div>
+
+                <div class="lyrics">
+
+                    కమలా కుచ చూచుక కుంకుమతో<br>
+                    నియతారుణి తాతుల నీలతనో ।<br>
+                    కమలాయత లోచన లోకపతే<br>
+                    విజయీభవ వేంకట శైలపతే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 2
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 2
+                </div>
+
+                <div class="lyrics">
+
+                    సచతుర్ముఖషణ్ముఖపంచముఖ<br>
+                    ప్రముఖాఖిలదైవతమౌళిమణే ।<br>
+                    శరణాగతవత్సల సారనిధే<br>
+                    పరిపాలయ మాం వృషశైలపతే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 3
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 3
+                </div>
+
+                <div class="lyrics">
+
+                    అతివేలతయా తవ దుర్విషహైః<br>
+                    అనువేలకృతైరపరాధశతైః ।<br>
+                    భరితం త్వరితం వృషశైలపతే<br>
+                    పరయా కృపయా పరిపాహి హరే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 4
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 4
+                </div>
+
+                <div class="lyrics">
+
+                    అధివేంకటశైలముదారమతే<br>
+                    జనతాభిమతాధికదానరతాత్ ।<br>
+                    పరదేవతయా గదితాన్నిగమైః<br>
+                    కమలాదయితాన్న పరం కలయే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 5
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 5
+                </div>
+
+                <div class="lyrics">
+
+                    కలవేణురవావశగోపవధూ<br>
+                    శతకోటివృతాత్స్మరకోటిసమాత్ ।<br>
+                    ప్రతివల్లవికాభిమతాత్సుఖదాత్<br>
+                    వసుదేవసుతో న పరం కలయే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 6
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 6
+                </div>
+
+                <div class="lyrics">
+
+                    అభిరామగుణాకర దాశరథే<br>
+                    జగదేకధనుర్ధర ధీరమతే ।<br>
+                    రఘునాయక రామ రమేశ విభో<br>
+                    వరదో భవ దేవ దయాజలధే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 7
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 7
+                </div>
+
+                <div class="lyrics">
+
+                    అవనీతనయాకమనీయకరం<br>
+                    రజనీకరచారుముఖాంబురుహమ్ ।<br>
+                    రజనీకరచారుముఖాంబురుహమ్<br>
+                    రఘునాయక రామ రమేశ విభో ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 8
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 8
+                </div>
+
+                <div class="lyrics">
+
+                    సుముఖం సుహృదం సులభం సుఖదం<br>
+                    స్వనుజం చ సుకాయమమోఘశరమ్ ।<br>
+                    అపహాయ రఘూద్వహమన్యమహం<br>
+                    న కథంచన కంచన జాతు భజే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 9
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 9
+                </div>
+
+                <div class="lyrics">
+
+                    వినా వేంకటేశం న నాథో న నాథః<br>
+                    సదా వేంకటేశం స్మరామి స్మరామి ।<br>
+                    హరే వేంకటేశ ప్రసీద ప్రసీద<br>
+                    ప్రియం వేంకటేశ ప్రయచ్ఛ ప్రయచ్ఛ ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 10
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 10
+                </div>
+
+                <div class="lyrics">
+
+                    అహం దూరతస్తే పదాంభోజయుగ్మ<br>
+                    ప్రణామేచ్ఛయా గత్య సేవాం కరోమి ।<br>
+                    సకృత్సేవయా నిత్యసేవాఫలం త్వం<br>
+                    ప్రయచ్ఛ ప్రయచ్ఛ ప్రభో వేంకటేశ ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERSE 11
+                 ================================================= -->
+
+            <div class="verse">
+
+                <div class="verse-number">
+                    శ్లోకం 11
+                </div>
+
+                <div class="lyrics">
+
+                    అజ్ఞానినా మయా దోషానశేషాన్<br>
+                    విహితాన్ హరే ।<br>
+                    క్షమస్వ త్వం క్షమస్వ త్వం<br>
+                    శేషశైలశిఖామణే ॥
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ENDING
+                 ================================================= -->
+
+            <div class="ending">
+
+                ఇతి శ్రీ వేంకటేశ్వర స్తోత్రం ॥
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        శ్రీ వేంకటేశ్వర స్వామి వారికి సమర్పణం
+
+        <br>
+
+        <span class="creator-name">
+            కోట అభిషేక్
+        </span>
+
+    </footer>
+
+
+    <!-- =========================================================
+         BACK TO TOP
+         ========================================================= -->
+
+    <button
+        class="top-button"
+        onclick="window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })"
+        aria-label="పైకి వెళ్ళండి"
+        title="పైకి వెళ్ళండి">
+
+        ↑
+
+    </button>
+
+
+</body>
+
+</html>
